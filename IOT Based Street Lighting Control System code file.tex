@@ -1,0 +1,297 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+
+\title{IOT Based Street Lighting Control System\\
+\thanks{Identify applicable funding agency here. If none, delete this.}
+}
+
+\author
+{\IEEEauthorblockN{1\textsuperscript{st} MD. ZUNAYED ISLAM}
+\IEEEauthorblockA{\textit{dept. Of CSE(Diploma} \\
+\textit{ID: 200122127}\\
+European University of Bangladesh}
+\and
+\IEEEauthorblockN{2\textsuperscript{st} FARVEJ HOSSAIN}
+\IEEEauthorblockA{\textit{dept. Of CSE(Diploma} \\
+\textit{ID: 2001221101}\\
+European University of Bangladesh}
+\and
+\IEEEauthorblockN{3\textsuperscript{st} JARIN AKTER}
+\IEEEauthorblockA{\textit{dept. Of CSE(Diploma} \\
+\textit{ID: 200122141}\\
+European University of Bangladesh}
+\and
+\IEEEauthorblockN{4\textsuperscript{st} TAHMINA SIAM RASHID}
+\IEEEauthorblockA{\textit{dept. Of CSE(Diploma} \\
+\textit{ID: 200122093}\\
+European University of Bangladesh}
+\and
+\IEEEauthorblockN{5\textsuperscript{st} MD. FAHIM HUSSAIN}
+\IEEEauthorblockA{\textit{dept. Of CSE(Diploma} \\
+\textit{ID: 200122094}\\
+European University of Bangladesh}
+\and
+\IEEEauthorblockN{6\textsuperscript{st} SURAIYA YESMIN}
+\IEEEauthorblockA{\textit{dept. Of CSE(Diploma} \\
+\textit{ID: 200122128}\\
+European University of Bangladesh}
+}
+
+\maketitle
+
+\begin{abstract}
+
+Now-a-days the amount of power consumed by lighting and streets shares a major energy demand. Nowadays,
+human has become too busy, and is unable to find time even to switch off the lights wherever not necessary.
+Generally, street lights are switched on for whole night and during the day, they are switched off. But during
+the night time, street lights are not necessary if there is no traffic. Saving of this energy is very important factor
+these days as energy resources are getting reduced day by day. To overcome from this issue, a proper energy
+saving methods and lighting control to be implemented. The proposed work is to have two controls like, one is
+to switch of lights during no vehicle moments in streets and automatically switch it on when vehicles arrive
+and the other modes are to give less intensity light for pedestrian and to switch on bright mode during vehicle
+moments at sides on the roads. In this work the sensor is used for street arrangement, the Photo diodes and IR
+sensors are used to sense vehicle moments. The control signals of sensors have been fed to microcontroller 8051.
+Moreover the automatic and intelligent control schemes are required to control the complex lighting system
+due to growth of cities and standard of living. 
+\end{abstract}
+
+\begin{IEEEkeywords}
+Microcontroller, Streetlights, Photo Diodes, IR Sensor 
+\end{IEEEkeywords}
+
+\section{Introduction}
+Generally, street light control system is a simple
+concept which uses a transistor to turn ON in the
+night time and turn OFF during the day time.
+Providing street lighting is one of the most important
+and expensive responsibilities of a city. Energy
+efficient technologies and design mechanism can
+reduce cost of the street lighting drastically. The work
+related to design of energy efficient street lighting
+system mainly focuses on using sensor based
+technology. The entire process can be done by a using
+a sensor namely LDR (Light dependent resistor).
+Nowadays conserving the energy is an essential part
+and day by day energy resources are getting decreased.
+So our next generations may face a lot of problems
+due to this lack of resources. This system doesn’t need
+a manual operation to turn ON/OFF the street lights.
+The street light system detects whether there is need
+of light or not. This system was designed to detect the
+light automatically and switch on's light. The design
+makes use of a microcontroller to control the outputs
+when it receives input from the resistor.
+This design can be used in different areas like Street
+lights, Public parks, and lights outside of houses. A
+report was made to present an efficient street lighting
+system with reduced power consumption in
+comparison to other normal lighting systems by
+knowing on this LED’s are more efficient than any
+other diodes or bulbs.  
+
+\section{RELATED WORK}
+
+\subsection{Optimization of a standalone street light system
+with consideration of lighting control. [1] }
+This paper aims at designing and executing the
+advanced development of embedded systems for
+energy saving of street lamps. Nowadays, the human
+has become too busy and is unable to find time even
+to switch the lights wherever not necessary. This
+paper gives the best solution for electrical power
+wastage. Also, the manual operation of the lighting
+system could eliminate. In this article, Light Emitting
+Diode (LED) is used. In this system, the main
+drawback was switching arrays of street lights were
+not possible. Only Single Street can be operated.
+\subsection{The efficient control algorithm for a smart solar
+street light. [2] }
+This proposed system works on solar energy. The
+street light gets charged on sun energy in the daytime,
+and it is consumed at night. The sensors get
+automatically ON in the darkness and OFF in daytime.
+When the battery of solar street light gets discharged,
+it switched to RTC controller. If the weather changes,
+the sun energy is not sufficient to charge the solar
+batteries. Hence it may lead to the inconvenience of
+the lighting of the street light. 
+
+\subsection{E-Street zone-automatic Street light based on the
+movement of vehicles. [3] }
+Every street light can be integrated with an IR sensor
+which detects the movement of vehicles. When the
+vehicle passes, light gets illuminated. Due to this
+electricity can be consumed less and energy can be
+saved up to some extent. A solar panel has been
+installed, and hence it gets charged by sunlight. But it
+is impractical as street lights are also useful for the
+people walking by the roadside and this sensor only
+goes on when the vehicle passes it. Also, it is costly
+due to IR sensors used in every single street light. 
+
+\section{PROBLEM STATEMENT}
+Lights contain chips. Chips consists Microcontroller
+along with various sensors like CO2 sensor, fog sensor,
+light intensity sensor, noise sensor and GSM modules
+for wireless data sending and receiving between
+concentrator and PC. The data from the chips would
+get on a remote concentrator (PC), and the PC would
+also transfer the controlling action to the chip.
+According to the survey of variation in the intensity
+of light in the field area, an efficient programming
+would be done to ensure the least consumption of
+energy. The emissions in the atmospheres would
+detect along with the use of energy and any theft of
+electricity.
+
+\section{METHODOLOGY}
+
+
+Automatic control of street lights is designed to turn
+on and turn off street lights automatically. This
+proposed system checks the amount of light. If light
+is 80 percent available, it automatically turns off
+street lights. But if amount of light is less than 80
+percent, this project will automatically turn on street
+lights. One can also adjust it according to its
+requirement. Light sensor is used to detect intensity
+of light. When LDR allows the current to flow the
+block diagram of circuitry goes into working
+condition. IR sensors start emitting IR rays via IR
+transmitters. The IR diodes are placed on one side of
+the road and photodiodes are placed on the other side of the road, directly facing the IR diodes. When
+there is no vehicle on the highway. In this case, the
+IR radiation emitted from the IR diode directly falls
+on the photodiode which is exactly opposite to it.
+This causes the photodiode to fall in conduction state.
+This implies that photodiode conducts and current
+passes through it. But as soon as any vehicle crosses
+or obstructs the path of IR rays and prohibits it to
+reach at IR receivers the microcontroller starts
+getting the blockage signals. The programming
+installed in microcontroller starts running which
+basically presented here allows three street lights to
+glow that are- the light in front of vehicle, behind
+the vehicle and parallel to vehicle making backward
+and forward street visible. Transformer converts the
+high 230V AC to 12V AC. Rectifier converts it into
+DC. For voltage regulation we are using LM 7805
+and 7812 to produce ripple free 5 and 12 volts DC
+constant supply. Emitting Diode (LED) replaces HID
+lamps by engaging a programmable microcontroller
+that controls the street light on/off conditions.
+
+\subsection{Light Dependent Resistor}\label{AA}
+A Light Dependent Resistor (LDR) is also called a
+photo resistor or a cadmium sulphide (CdS) cell. It is
+also called a photoconductor. It is basically a
+photocell that works on the principle of
+photoconductivity. The passive component is
+basically a resistor whose resistance value decreases
+when the intensity of light decreases.
+This optoelectronic device is mostly used in light
+varying sensor circuit, and light and dark activated
+switching circuits. Some of its applications include
+camera light meters, street lights, clock radios, light
+beam alarms, reflective smoke alarms and outdoor
+clocks.LDR used in street light automatically switches
+ON when the night falls and turns OFF when the sun
+rises. The snake like track shown is the Cadmium
+Sulphide (CdS) film which also passes through the
+sides. On the top and bottom are metal films which are
+connected to the terminal leads. It is designed in such
+a way as to provide maximum possible contact area
+with the two metal films. The structure is housed in a
+clear plastic or resin case, to provide free access to
+external light. As explained above, the main
+component for the construction of LDR is cadmium
+sulphide (Cds), which is used as the photoconductor
+and contains no or very few electrons when not
+illuminated. In the absence of light it is designed to
+have a high resistance in the range of mega ohms. As
+soon as light falls on the sensor, the electrons are
+liberated and the conductivity of the material
+increases.
+
+\subsection{Microcontroller}
+A Microcontroller has all the necessary components
+which a microprocessor possesses and invariably it
+poses ROM, RAM, Serial Port, timers, interrupts
+Input-Output ports, and a clock circuit. The
+microcontroller always focus on the chip facility and
+it is more prominent in the case of serial ports,
+analog-todigital converters, timers, counters, readonly memory, parallel input, interrupt control,
+random access memory, and output ports. The
+concept of the 8051 microcontroller arises from here
+and here we will discuss in depth about the various
+aspects, uses, programming and other features of 8051
+microcontrollers. 
+
+\section{CONCLUSION}
+
+This proposed system is a cost effective, practical, ecofriendly and the safest way to save energy. It clearly tackles the two problems that world is facing today,
+saving of energy and also disposal of incandescent
+lamps very efficiently. According to statistical data we
+can save more that 40 % of electrical energy that is
+now consumed by the highways. Initial cost and
+maintenance can be the draw backs of this system.
+But with the advancement in technology and good
+resource planning the cost of the project can be cut
+down and also with the use of good equipment the
+maintenance can also be reduced in terms of periodic
+checks.The LEDs have long life & emit cool light,
+donor have any toxic material and can be used for fast
+switching. For these reasons our system presents far
+more advantages which can over shadow the present
+limitations. Keeping in view the long term benefits
+and the initial cost would never be a problem as the
+investment return time is very less. The proposed
+system has scope in various other applications like for
+providing lighting in industries, campuses and
+parking lots of huge shopping malls. This can also be
+used for surveillance in corporate campuses and
+industries.
+\section{REFERENCES}
+
+\begin{itemize}
+\item Farah Ramadhani, and Kamalrulnizam Abu
+Bakar, and Muham-Mad Gary Shafer.
+“Optimisation of standalone street light system
+withconsideration of lighting control”, IEEE,
+2013.
+\item Jain, Abhilasha, and Chandrasekhar Nagarajan.
+"Efficient-Control Algorithm for a Smart Solar
+Street Light." Next Generation Mobile
+Applications, Services and Technologies, 2015.
+\item P Arvind and V.Kishore . “E-Street ZoneAutomatic Streetlight based on the Movement
+of Vehicles”, IJST 2016.
+
+\item Energy efficient Smart Street Light, IEEE
+conference 2017, Ravi kishorekodali and
+Subbachary Yerroju, Department of Electronics
+and Communication Engineering, National
+Institute of Technology, Warangal. 
+\item A smart street light intensity optimizer, IEEE
+Conference 2017, Bilam Roy and Jayita Datta,
+Department of Applied Electronics and
+Instrumentation Engineering, Guru Nanak
+Institute of Technology, Kolkata, W.B., India.
+\item Internet of Things Based Intelligence Street
+Lighting System for Smart city, IJIRSET, May
+2016, Parkash, Prabhu V, Dandu Rajendra. 
+\item Automatic Street Light Control System using
+Wireless Sensor Networks, IEEE-2017. Dhiraj
+Sunehra, SMIEEE, JNTU college of Engineering,
+Department of Electronics and Communication
+Engineering, Telangana, India. 
+\end{document}
